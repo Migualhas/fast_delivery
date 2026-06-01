@@ -1,0 +1,41 @@
+# FastDelivery Express - Sistema de Gerenciamento de Entregas Urbanas 
+
+## 1. Descrição do Projeto
+O FastDelivery Express é um sistema baseado em terminal (console) desenvolvido para automatizar e controlar o fluxo de entregas urbanas de uma empresa de logísticaO sistema permite o cadastro e gerenciamento completo de três entidades principais: **Clientes**, **Entregadores** e Pedidos**. Além do controle cadastral, a aplicação gerencia dinamicamente o cálculo de fretes com base na distância e no tipo de envio selecionado, mantendo um histórico atualizado do status de cada entrega em tempo real [cite: 25-26, 29].
+
+---
+
+## 2. Tecnologias Utilizadas
+* [cite_start]**Python 3.11+** (ou versão superior) 
+* [cite_start]**Git** para controle de versão local [cite: 170]
+* [cite_start]**GitHub** para hospedagem do repositório público e colaboração [cite: 171, 188]
+
+---
+
+## 3. Estrutura de Pastas
+O projeto foi arquitetado seguindo padrões profissionais do mercado de trabalho, utilizando organização em pacotes e separação clara de responsabilidades em camadas:
+
+fast_delivery/
+│
+├── main.py                 # Ponto de entrada e inicialização do sistema 
+├── README.md               # Documentação técnica do projeto (este arquivo) 
+│
+├── interfaces/             # Contratos e classes abstratas do sistema 
+│   └── calculo_frete_interface.py
+│
+├── modelos/                # Classes de entidade (regras estruturais e atributos) 
+│   ├── pessoa.py
+│   ├── cliente.py
+│   ├── entregador.py
+│   ├── pedido.py
+│   └── entrega.py
+│
+├── services/               # Camada de negócio (regras de cadastro, busca e listagem)
+│   ├── cliente_service.py
+│   ├── pedido_service.py
+│   └── entrega_service.py
+│
+└── util/                   # Validadores, menus e formatadores auxiliares
+    ├── validador.py
+    ├── menu.py
+    └── formatador.py
